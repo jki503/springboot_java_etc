@@ -1,7 +1,7 @@
 ---
 Title: 01. Repository, DAO, Infrastructure 대체 뭔 차이..?
-Author: Jung
 Category: Web, Web Architecture, SpringBoot, DDD
+Author: Jung
 ---
 
 ## 알아보게된 계기
