@@ -5,6 +5,20 @@ Author: Jung
 reference: [Gradle과 함께하는 Backend Layered Architecture - 백근영](https://medium.com/riiid-teamblog-kr/gradle%EA%B3%BC-%ED%95%A8%EA%BB%98%ED%95%98%EB%8A%94-backend-layered-architecture-97117b344ba8)
 ---
 
+- [서론](#서론)
+  - [Layered Architecture?](#layered-architecture)
+  - [Gradle이란?](#gradle이란)
+- [본론](#본론)
+  - [Layer 살펴 보기](#layer-살펴-보기)
+    - [Presentation Layer](#presentation-layer)
+    - [Application Layer](#application-layer)
+    - [Domain Layer](#domain-layer)
+    - [Infrastructure Layer](#infrastructure-layer)
+    - [Layer를 gradle subproject로 만들기](#layer를-gradle-subproject로-만들기)
+- [요약](#요약)
+  - [layered architecture의 장점](#layered-architecture의-장점)
+  - [gradle과의 시너지](#gradle과의-시너지)
+
 > 개발자들은 유지보수 용이성을 갖춘 소프트웨어를 통해  
 > 기존의 코드를 최대한 건드리지 않고 모듈의 동작을 확장시킬 수 있어야한다.
 >
@@ -198,9 +212,9 @@ reference: [Gradle과 함께하는 Backend Layered Architecture - 백근영](htt
 
 </br>
 
-|               infrastructure -> domain               |
-| :--------------------------------------------------: |
-| [의존성의 방향이 역전](../res/_04_infrastructre.png) |
+|               infrastructure -> domain                |
+| :---------------------------------------------------: |
+| ![의존성의 방향이 역전](../res/_04_infrastructre.png) |
 
 </br>
 
@@ -216,3 +230,53 @@ reference: [Gradle과 함께하는 Backend Layered Architecture - 백근영](htt
 </br>
 
 #### Layer를 gradle subproject로 만들기
+
+</br>
+
+> 참고한 레퍼런스에서는 코틀린을 사용하신 것같다.  
+> 글에서 쓰신 것처럼 .gradle 및 .idea gradle 패키지들과  
+> 내가 만든 subProject들이 섞이면 패키지가 꼴보기 싫어진다...
+>
+> 참고하여 내 스타일대로 모듈을 하나 차곡차곡 세팅해보면
+
+</br>
+
+|              package              |
+| :-------------------------------: |
+| ![패키지](../res/_04_package.png) |
+
+</br>
+
+|              setting.gradle               |
+| :---------------------------------------: |
+| ![setting.gradle](../res/_04_setting.png) |
+
+</br>
+
+> 이런식으로 설정할 수 있다.  
+> 사실 포스팅 뒷 부분에 grpc를 정확히 몰라서  
+> 뒷부분 내용은 내가 필요할 때 참고해서 사용할 수 있도록 해야겠다.
+
+</br>
+
+## 요약
+
+</br>
+
+### layered architecture의 장점
+
+</br>
+
+- 각 레이어를 loosely coupling 된 형태로 구축하면서, 각자 자신의 관심사에만 집중할 수 있다.
+- 특히 핵심 비즈니스 로직을 순수하게 유지함으로써 유지보수와 확장성 측면에서 이득을 얻을 수 있다.
+
+</br>
+
+### gradle과의 시너지
+
+</br>
+
+- 자체적으로 외부 의존성을 관리하는 subproject 기능을 통해, 각 layer의 올바른 역할을 강제할 수 있게 된다.
+- 잠깐의 편의성과 타협하지 않고 개발 사이클 내내 best pracitce에 대해 고민하게 된다는 점에서, 문화적으로도 좋은 영향을 줄 수 있다.
+
+</br>
