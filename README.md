@@ -19,3 +19,11 @@
 </br>
 
 ## [05. 코드 커버리지와 Jacoco 적용기](./doc/section05.md)
+
+</br>
+
+## [06. 정적 코드 분석 도구인 SoanrQube 도입하기](./doc/section06.md)
+
+</br>
+
+## [07. NGINX 란? 그리고 Apache와의 차이는?](./doc/section07.md)
