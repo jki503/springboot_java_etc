@@ -27,3 +27,7 @@
 </br>
 
 ## [07. NGINX 란? 그리고 Apache와의 차이는?](./doc/section07.md)
+
+</br>
+
+## [08. JPA에서 key 생성 전략을 AUTO 사용하면 안되는 이유](./doc/setion08.md)
