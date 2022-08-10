@@ -30,8 +30,12 @@
 
 </br>
 
-## [08. JPA에서 key 생성 전략을 AUTO 사용하면 안되는 이유](./doc/setion08.md)
+## [08. JPA에서 key 생성 전략을 AUTO 사용하면 안되는 이유](./doc/section08.md)
 
 </br>
 
 ## [09. JPA 계층 구조 없이 화면에 특화된 쿼리 만들때 QueyrDsl 설정하기!](./doc/section09.md)
+
+</br>
+
+## [10. AOP란?](./doc/section10.md)
